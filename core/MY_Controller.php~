@@ -68,14 +68,6 @@ class MY_Controller extends CI_Controller
         $this->_load_models();
         $this->_load_helpers();
     }
-    
-    protected function _is_ajax() {
-        return ($this->input->server('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest') ? TRUE : FALSE;
-    }
-    
-    protected function _is_json() {
-        return strstr($this->input->get_request_header("Accept",TRUE),"json");
-    }
 
     /* --------------------------------------------------------------
      * VIEW RENDERING
